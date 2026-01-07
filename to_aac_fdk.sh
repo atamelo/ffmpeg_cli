@@ -6,4 +6,5 @@ sudo docker run --rm -it \
   linuxserver/ffmpeg \
   -i "/input/---" \
   -map 0 -c copy -c:a libfdk_aac -profile:a aac_low -vbr 5 -ac 6 -cutoff 20000 \
+  -b:a:0 <XXX>k -b:a:1 <YYY>k \
   "---"
